@@ -29,7 +29,7 @@ Below is a list of all the available scopes you can request from a user's profil
 (Currently staging only & authorization_code grant only)
 
 ### `/oauth/authorize` [GET]
-**Staging Link:** https://client-m8zn-feat-oauth.zeet-dust-labs.zeet.app/oauth/authorize
+**Link:** https://verify.de.xyz/oauth/authorize
 
 **Parameters:**
 - `response_type` - Set to `code` for `authorization_code` grant flow.
@@ -40,7 +40,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - `code_challenge_method` - Either `plain` or `S256`.
 
 ### `/oauth/token` [POST]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/oauth/token
+**Link:** https://api.oauth.dustlabs.com/oauth/token
 
 **Parameters:**
 - `grant_type` - Either `authorization_code` or `client_credentials`.
@@ -51,13 +51,13 @@ Below is a list of all the available scopes you can request from a user's profil
 - `code` - Authorization code from redirected URL.
 
 ### `/profile` [GET]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/profile
+**Link:** https://api.oauth.dustlabs.com/profile
 
 **Parameters:**
 - None
 
 ### `/profile/wallets` [GET]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/profile/wallets
+**Link:** https://api.oauth.dustlabs.com/profile/wallets
 
 **Scopes Required:** `wallets:read`
 
@@ -65,7 +65,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - None
 
 ### `/profile/collections` [GET]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/profile/collections
+**Staging Link:** https://api.oauth.dustlabs.com/profile/collections
 
 **Scopes Required:** `wallets:read`, `collections:read`
 
@@ -73,7 +73,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - None
 
 ### `/profile/socials` [GET]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/profile/socials
+**Link:** https://api.oauth.dustlabs.com/profile/socials
 
 **Scopes Required:** `socials:read` OR specific read permissions like `twitter:read`, `discord:read`, `telegram:read`
 
@@ -81,7 +81,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - None
 
 ### `/profile/dust` [GET]
-**Staging Link:** https://oauth-2wdo.dl-staging.zeet.app/profile/dust
+**Link:** https://api.oauth.dustlabs.com/profile/dust
 
 **Scopes Required:** `wallets:read`, `dust:read`
 
