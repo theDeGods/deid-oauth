@@ -19,15 +19,16 @@ export const config = {
       name: "de[id]",
       type: ProviderType.oauth,
       authorization: {
-        url: "https://client-m8zn-feat-oauth.zeet-dust-labs.zeet.app/oauth/authorize",
+        url: "https://verify.de.xyz/oauth/authorize",
         params: { scope: "wallets:read collections:read dust:read socials:read" }
       },
       checks: [ProviderChecks.pkce, ProviderChecks.state],
-      token: "https://oauth-2wdo.dl-staging.zeet.app/oauth/token",
-      userinfo: "https://oauth-2wdo.dl-staging.zeet.app/profile/",
+      token: "https://api.oauth.dustlabs.com/oauth/token",
+      userinfo: "https://api.oauth.dustlabs.com/profile",
       clientId: process.env.DEID_CLIENT_ID as string,
       clientSecret: process.env.DEID_CLIENT_SECRET as string,
       profile(response: any) {
+        console.log(response)
         return {
           id: response.profile.id,
           name: response.profile.name,
