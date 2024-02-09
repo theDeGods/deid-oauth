@@ -26,7 +26,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - `mobile:read` - Read permission for the phone number associated with the user's profile.
 
 ## OAuth Endpoints
-(Currently staging only & authorization_code grant only)
+(Currently authorization_code grant only)
 
 ### `/oauth/authorize` [GET]
 **Link:** https://verify.de.xyz/oauth/authorize
@@ -65,7 +65,7 @@ Below is a list of all the available scopes you can request from a user's profil
 - None
 
 ### `/profile/collections` [GET]
-**Staging Link:** https://api.oauth.dustlabs.com/profile/collections
+**Link:** https://api.oauth.dustlabs.com/profile/collections
 
 **Scopes Required:** `wallets:read`, `collections:read`
 
