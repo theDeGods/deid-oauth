@@ -9,7 +9,7 @@ For any assistance, feel free to reach out:
 
 ## Example Repositories
 - [NextAuth.js](https://github.com/theDeGods/deid-oauth/tree/main/examples/authorization_code/next-auth-js)
-- Passport-OAuth2 (In Progress)
+- Passport-OAuth2 (Pending)
 
 ## Scopes
 Below is a list of all the available scopes you can request from a user's profile. Note that some scopes may not be fully implemented yet and might return null fields until their release.
