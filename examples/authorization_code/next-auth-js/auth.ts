@@ -1,13 +1,6 @@
 import NextAuth from "next-auth"
+import type { NextAuthConfig } from "next-auth"
 
-enum ProviderType {
-  oauth = "oauth",
-}
-
-enum ProviderChecks {
-  pkce = "pkce",
-  state = "state",
-}
 
 export const config = {
   theme: {
@@ -17,18 +10,20 @@ export const config = {
     {
       id: "deid",
       name: "de[id]",
-      type: ProviderType.oauth,
+      type: "oauth",
       authorization: {
         url: "https://verify.de.xyz/oauth/authorize",
         params: { scope: "wallets:read collections:read dust:read socials:read" }
       },
-      checks: [ProviderChecks.pkce, ProviderChecks.state],
+      checks: ["pkce", "state"],
       token: "https://api.oauth.dustlabs.com/oauth/token",
       userinfo: "https://api.oauth.dustlabs.com/profile",
+      client: {
+        token_endpoint_auth_method: "client_secret_post"
+      },
       clientId: process.env.DEID_CLIENT_ID as string,
       clientSecret: process.env.DEID_CLIENT_SECRET as string,
       profile(response: any) {
-        console.log(response)
         return {
           id: response.profile.id,
           name: response.profile.name,
@@ -44,6 +39,6 @@ export const config = {
       return true
     },
   },
-}
+} satisfies NextAuthConfig
 
 export const { handlers, auth, signIn, signOut } = NextAuth(config)
