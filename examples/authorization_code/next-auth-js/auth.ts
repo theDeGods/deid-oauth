@@ -12,7 +12,7 @@ export const config = {
       name: "de[id]",
       type: "oauth",
       authorization: {
-        url: "https://verify.de.xyz/oauth/authorize",
+        url: "https://de.xyz/oauth/authorize",
         params: { scope: "wallets:read collections:read dust:read socials:read" }
       },
       checks: ["pkce", "state"],
